@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 const Test: React.FC = () => {
@@ -143,10 +144,15 @@ const Test: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 flex justify-center gap-4">
           <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             Explore Afrobeutic
           </Button>
+          <Link href="#">
+            <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              Go to Dashboard
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
