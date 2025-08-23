@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
 
 const Test: React.FC = () => {
   const { theme, setTheme } = useTheme();
@@ -24,7 +25,7 @@ const Test: React.FC = () => {
         <div className="flex justify-center mb-16">
           <button
             onClick={toggleTheme}
-            className="relative p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 cursor-pointer"
+            className="relative px-2 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 cursor-pointer"
             aria-label="Toggle theme"
           >
             <div className="flex items-center space-x-2 px-4 py-2">
@@ -143,9 +144,9 @@ const Test: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             Explore Afrobeutic
-          </button>
+          </Button>
         </div>
       </div>
     </div>
