@@ -61,7 +61,7 @@ export default function PWAInstallPrompt() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-300 text-black p-4 rounded-lg shadow-lg">
+    <div className="fixed z-[500001] bottom-4 right-4 bg-slate-300 text-black p-4 rounded-lg shadow-lg">
       <div className="flex justify-end !mt-[-8px] !mr-[-10px]">
         <button
           aria-label="Close install prompt"

@@ -1,6 +1,7 @@
 import PWAInstallPrompt from "@/components/PWAInstallPrompt";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Afrobeutic",
   description: "A platform for beauty and wellness.",
-  // metadataBase: new URL(defaultUrl),
+  // metadataBase: new URL("http://localhost:3000/"),
   applicationName: "Afrobeutic",
   manifest: "/manifest.json",
   icons: {
@@ -40,7 +41,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Next Pwa",
+    title: "Afrobeutic",
     startupImage: [
       {
         url: "/apple-splash-2048-2732.jpg",
@@ -215,6 +216,15 @@ export const metadata = {
     ],
   },
 };
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
